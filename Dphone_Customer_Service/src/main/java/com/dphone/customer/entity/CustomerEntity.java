@@ -12,41 +12,44 @@ import jakarta.persistence.Table;
 public class CustomerEntity {
 	
 	@Id
-	@Column(name = "customerId")
-	private long customerId;
-	private String firstName;
-	private String lastName;
+	@Column(name = "customer_id")
+	private long customer_id;
+	private String first_name;
+	private String last_name;
 	private String email;
 	private long mobile;
-	public CustomerEntity(long customerId, String firstName, String lastName, String email, long mobile) {
-		super();
-		this.customerId = customerId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.mobile = mobile;
-	}
+	
 	public CustomerEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public long getCustomerId() {
-		return customerId;
+	
+	public CustomerEntity(long customer_id, String first_name, String last_name, String email, long mobile) {
+		super();
+		this.customer_id = customer_id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.mobile = mobile;
 	}
-	public void setCustomerId(long customerId) {
-		this.customerId = customerId;
+
+	public long getCustomer_id() {
+		return customer_id;
 	}
-	public String getFirstName() {
-		return firstName;
+	public void setCustomer_id(long customer_id) {
+		this.customer_id = customer_id;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public String getFirst_name() {
+		return first_name;
 	}
-	public String getLastName() {
-		return lastName;
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public String getLast_name() {
+		return last_name;
+	}
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
 	}
 	public String getEmail() {
 		return email;
@@ -62,7 +65,7 @@ public class CustomerEntity {
 	}
 	@Override
 	public String toString() {
-		return "CustomerEntity [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+		return "CustomerBean [customer_id=" + customer_id + ", first_name=" + first_name + ", last_name=" + last_name
 				+ ", email=" + email + ", mobile=" + mobile + "]";
 	}
 

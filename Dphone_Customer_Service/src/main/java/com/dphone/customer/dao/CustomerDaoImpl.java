@@ -10,7 +10,6 @@ import com.dphone.customer.service.CustomerService;
 
 
 @Service
-
 public class CustomerDaoImpl implements CustomerService{
 
 	@Autowired

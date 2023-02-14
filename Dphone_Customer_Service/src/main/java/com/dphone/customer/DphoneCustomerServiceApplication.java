@@ -8,7 +8,7 @@ public class DphoneCustomerServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DphoneCustomerServiceApplication.class, args);
-		System.out.println("Application Started");
+		System.out.println("Customer Application Started");
 	}
 
 }
