@@ -30,5 +30,21 @@ public class CustomerDaoImpl implements CustomerService{
 		// TODO Auto-generated method stub
 		return customerDao.findById(customerId).get();
 	}
+
+
+
+	@Override
+	public String deleteCustomer(long customer_id) {
+		// TODO Auto-generated method stub
+		String messString;
+		if(customerDao.existsById(customer_id)) {
+			customerDao.deleteById(customer_id);
+			messString=customer_id+" deleted Successfully";
+		}
+		else {
+			messString=customer_id+" not Present";
+		}
+		return messString;
+	}
 	
 }

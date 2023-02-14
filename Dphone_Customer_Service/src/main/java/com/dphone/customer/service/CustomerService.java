@@ -7,5 +7,7 @@ public interface CustomerService {
 
 	CustomerEntity addCustomer(CustomerBean customerBean);
 	
-	CustomerEntity showCustomer(long customerId);
+	CustomerEntity showCustomer(long customer_id);
+	
+	String deleteCustomer(long customer_id);
 }
