@@ -1,0 +1,35 @@
+package com.dphone.customer.dao;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dphone.customer.bean.CustomerBean;
+import com.dphone.customer.entity.CustomerEntity;
+import com.dphone.customer.service.CustomerService;
+
+
+@Service
+
+public class CustomerDaoImpl implements CustomerService{
+
+	@Autowired
+	private CustomerDao customerDao;
+	
+	@Override
+	public CustomerEntity addCustomer(CustomerBean customerBean) {
+		CustomerEntity customerEntity=new CustomerEntity();
+		System.out.println("Dao bean "+customerBean);
+		BeanUtils.copyProperties(customerBean, customerEntity);
+		return customerDao.save(customerEntity);
+	}
+	
+	
+
+	@Override
+	public CustomerEntity showCustomer(long customerId) {
+		// TODO Auto-generated method stub
+		return customerDao.findById(customerId).get();
+	}
+	
+}
