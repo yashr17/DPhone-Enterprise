@@ -1,5 +1,7 @@
 package com.dphone.user.service;
 
+import java.util.List;
+
 import com.dphone.user.bean.UserBean;
 
 public interface UserService {
@@ -13,4 +15,6 @@ public interface UserService {
 	public UserBean showUserInfo(int userId);
 
 	public String deleteUser(int userId);
+
+	public List<String> getUsername();
 }

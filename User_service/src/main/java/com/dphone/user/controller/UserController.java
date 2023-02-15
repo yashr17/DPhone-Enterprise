@@ -1,5 +1,7 @@
 package com.dphone.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,25 +18,6 @@ import com.dphone.user.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-
-	// Endpoint to be mapped to error 404 page, yet to be done
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ResponseEntity<String> homePage() {
-		String responseString = "Service under maintenance";
-		return new ResponseEntity<String>(responseString, HttpStatus.BAD_GATEWAY);
-	}
-
-	// Test endpoint
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test() {
-		return "test function in api working fine";
-	}
-
-	// Test endpoint to test service layer
-	@RequestMapping(value = "/test-service", method = RequestMethod.GET)
-	public String testService() {
-		return this.userService.testService();
-	}
 
 	// Create new User
 	@RequestMapping(value = "/add-user", method = RequestMethod.POST)
@@ -67,4 +50,38 @@ public class UserController {
 	
 	// Fetch referrals created by user
 	
+	
+	/*
+	 * 
+	 * 
+	 * Testing endpoints below
+	 * 
+	 * 
+	 */
+	
+	// Endpoint to be mapped to error 404 page, yet to be done
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ResponseEntity<String> homePage() {
+		String responseString = "Service under maintenance";
+		return new ResponseEntity<String>(responseString, HttpStatus.BAD_GATEWAY);
+	}
+	
+	// Test endpoint
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test() {
+		return "test function in api working fine";
+	}
+	
+	// Test endpoint to test service layer
+	@RequestMapping(value = "/test-service", method = RequestMethod.GET)
+	public String testService() {
+		return this.userService.testService();
+	}
+	
+	// Test endpoint to test @Query
+	@RequestMapping(value = "/show-all-user", method = RequestMethod.GET)
+	public ResponseEntity<List<String>> getUsername() {
+		List<String> list = this.userService.getUsername();
+		return new ResponseEntity<List<String>>(list,HttpStatus.OK);
+	}
 }

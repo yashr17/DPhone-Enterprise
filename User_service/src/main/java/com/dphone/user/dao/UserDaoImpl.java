@@ -1,5 +1,7 @@
 package com.dphone.user.dao;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,14 +19,21 @@ public class UserDaoImpl {
 	}
 
 	public UserBean updateUser(UserBean userBean) {
-		int userId = userBean.getUserId();
-		UserEntity userEntity = new UserEntity();
-		BeanUtils.copyProperties(userBean, userEntity);
-		userdao.save(userEntity);
 		
-		UserEntity updatedUserEntity = userdao.getReferenceById(userId);
+		UserEntity userEntity = new UserEntity();
 		UserBean updatedUserBean = new UserBean();
-		BeanUtils.copyProperties(updatedUserEntity, updatedUserBean);
+		
+		try {
+			int userId = userBean.getUserId();
+			BeanUtils.copyProperties(userBean, userEntity);
+			userdao.save(userEntity);
+			
+			UserEntity updatedUserEntity = userdao.getReferenceById(userId);
+			BeanUtils.copyProperties(updatedUserEntity, updatedUserBean);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		return updatedUserBean;
 	}
 
@@ -35,10 +44,26 @@ public class UserDaoImpl {
 		return userBean;
 	}
 
-	public void deleteUser(int userId) {
+	public String deleteUser(int userId) {
 		// TODO Auto-generated method stub
-		userdao.deleteById(userId);
+		try {
+			userdao.deleteById(userId);			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return "User with userId: " + userId + " does not exist";
+		}
+		return null;
 	}
 	
+	/*
+	 * 
+	 * Testing methpds below
+	 * 
+	 */
+	
+	public List<String> getUsername() {
+		List<String> list = userdao.getUsername();
+		return list;
+	}
 	
 }

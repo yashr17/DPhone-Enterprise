@@ -1,5 +1,7 @@
 package com.dphone.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +13,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDaoImpl userDaoImpl;
 
-	@Override
-	public String testService() {
-		// TODO Auto-generated method stub
-		return "testService working";
-	}
 
 	@Override
 	public String addUser(UserBean userBean) {
@@ -41,8 +38,27 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public String deleteUser(int userId) {
 		// TODO Auto-generated method stub
-		userDaoImpl.deleteUser(userId);
-		return null;
+		String messageString = userDaoImpl.deleteUser(userId);
+		return messageString;
+	}
+	
+	/*
+	 * 
+	 * Testing methods below
+	 * 
+	 */
+	
+	@Override
+	public String testService() {
+		// TODO Auto-generated method stub
+		return "testService working";
+	}
+
+	@Override
+	public List<String> getUsername() {
+		// TODO Auto-generated method stub
+		List<String> list = userDaoImpl.getUsername();
+		return list;
 	}
 
 }
