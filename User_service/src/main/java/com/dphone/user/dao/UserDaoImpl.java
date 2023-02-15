@@ -1,8 +1,5 @@
 package com.dphone.user.dao;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,15 +16,28 @@ public class UserDaoImpl {
 		userdao.save(userEntity);
 	}
 
-	public List<UserBean> showAllUsers() {
-		List<UserEntity> userEntityList = userdao.findAll();
-		List<UserBean> userBeanList = new ArrayList<UserBean>();
-		for (UserEntity userEntity : userEntityList) {
-			UserBean userBean = new UserBean();
-			BeanUtils.copyProperties(userEntity, userBean);
-			userBeanList.add(userBean);
-		}
-		return userBeanList;
+	public UserBean updateUser(UserBean userBean) {
+		int userId = userBean.getUserId();
+		UserEntity userEntity = new UserEntity();
+		BeanUtils.copyProperties(userBean, userEntity);
+		userdao.save(userEntity);
+		
+		UserEntity updatedUserEntity = userdao.getReferenceById(userId);
+		UserBean updatedUserBean = new UserBean();
+		BeanUtils.copyProperties(updatedUserEntity, updatedUserBean);
+		return updatedUserBean;
+	}
+
+	public UserBean showUserInfo(int userId) {
+		UserEntity userEntity = userdao.getReferenceById(userId);
+		UserBean userBean = new UserBean();
+		BeanUtils.copyProperties(userEntity, userBean);
+		return userBean;
+	}
+
+	public void deleteUser(int userId) {
+		// TODO Auto-generated method stub
+		userdao.deleteById(userId);
 	}
 	
 	

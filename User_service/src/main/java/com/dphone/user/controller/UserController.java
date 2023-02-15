@@ -1,36 +1,70 @@
 package com.dphone.user.controller;
 
-import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dphone.user.bean.UserBean;
-import com.dphone.user.dao.UserDaoImpl;
+import com.dphone.user.service.UserService;
 
 @RestController
 public class UserController {
-	private UserDaoImpl userDaoImpl;
-	
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@Autowired
+	private UserService userService;
+
+	// Endpoint to be mapped to error 404 page, yet to be done
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<String> homePage() {
-		System.out.println("Servuce under maintenance");
-		return new ResponseEntity<String>("Error page", HttpStatus.BAD_GATEWAY);
+		String responseString = "Service under maintenance";
+		return new ResponseEntity<String>(responseString, HttpStatus.BAD_GATEWAY);
 	}
-	
+
+	// Test endpoint
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test() {
+		return "test function in api working fine";
+	}
+
+	// Test endpoint to test service layer
+	@RequestMapping(value = "/test-service", method = RequestMethod.GET)
+	public String testService() {
+		return this.userService.testService();
+	}
+
+	// Create new User
 	@RequestMapping(value = "/add-user", method = RequestMethod.POST)
 	public ResponseEntity<String> addUser(@RequestBody UserBean userBean) {
-		userDaoImpl.addUser(userBean);
-		return new ResponseEntity<String>("User added successfully", HttpStatus.OK);
+		String messageString =  this.userService.addUser(userBean);
+		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	}
+
+	// Update existing User
+	@RequestMapping(value = "/update-user", method = RequestMethod.PUT)
+	public ResponseEntity<String> updateUser(@RequestBody UserBean userBean) {
+		UserBean udatedUserBean = this.userService.updateUser(userBean);
+		String messageString = "User updated successfully!\n\n" + udatedUserBean.toString();
+		return new ResponseEntity<String>(messageString, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/show-all-users", method = RequestMethod.POST)
-	public ResponseEntity<List<UserBean>> showAllUsers() {
-		List<UserBean> userBeanList = userDaoImpl.showAllUsers();
-		return new ResponseEntity<List<UserBean>>(userBeanList, HttpStatus.OK);
+	// Get User data
+	@RequestMapping(value = "/{userId}/user-info", method = RequestMethod.GET)
+	public ResponseEntity<UserBean> showUserInfo(@PathVariable("userId") int userId) {
+		UserBean userBean = userService.showUserInfo(userId);
+		return new ResponseEntity<UserBean>(userBean, HttpStatus.OK);
 	}
- }
+	
+	// Delete User
+	@RequestMapping(value = "/{userId}/delete-user", method = RequestMethod.DELETE)
+	public ResponseEntity<String> deleteUser(@PathVariable("userId") int userId){
+		String messageString = this.userService.deleteUser(userId);
+		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	}
+	
+	// Fetch referrals created by user
+	
+}

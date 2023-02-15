@@ -2,12 +2,17 @@ package com.dphone.user.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_details")
 public class UserEntity {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private int userId;
 	@Column(name = "first_name")
@@ -40,6 +45,9 @@ public class UserEntity {
 
 	public int getUserId() {
 		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 	public String getFname() {
 		return fname;
