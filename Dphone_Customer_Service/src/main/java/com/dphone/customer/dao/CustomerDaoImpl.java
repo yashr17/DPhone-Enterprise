@@ -46,5 +46,17 @@ public class CustomerDaoImpl implements CustomerService{
 		}
 		return messString;
 	}
+
+
+
+	@Override
+	public CustomerBean updateCustomer(Long customer_id, CustomerBean customerBean) {
+		// TODO Auto-generated method stub
+		CustomerEntity customerEntity=new CustomerEntity();
+		BeanUtils.copyProperties(customerBean, customerEntity);
+		customerDao.save(customerEntity);
+		return customerBean;
+		
+	}
 	
 }

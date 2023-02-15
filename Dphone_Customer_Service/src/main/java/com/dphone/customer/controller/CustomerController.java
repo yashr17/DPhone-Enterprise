@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,5 +44,12 @@ public class CustomerController {
 	public ResponseEntity<String> deletCustomer(@PathVariable("customer_id") Long customer_id){
 		customerDaoImpl.deleteCustomer(customer_id);
 		return new ResponseEntity<String>("Employee Deleted Successfully",HttpStatus.OK);
+	}
+	
+	@PutMapping(value = "/updateCustomer/{customer_id}")
+	public ResponseEntity<CustomerBean> updateCustomer(@PathVariable("customer_id") Long customer_id,@RequestBody CustomerBean customerBean){
+		CustomerBean customerBean2= customerDaoImpl.updateCustomer(customer_id, customerBean);
+		return  new ResponseEntity<CustomerBean>(customerBean2,HttpStatus.OK);
+		
 	}
 }

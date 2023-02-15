@@ -10,4 +10,6 @@ public interface CustomerService {
 	CustomerEntity showCustomer(long customer_id);
 	
 	String deleteCustomer(long customer_id);
+	
+	CustomerBean updateCustomer(Long customer_id,CustomerBean customerBean);
 }
