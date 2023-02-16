@@ -323,3 +323,139 @@
 2023-02-14 15:50:51,471 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-02-14 15:50:51,473 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Downloads/demoSpringRest/src/test/resources
 >>>>>>> Stashed changes
+2023-02-16 10:21:43,485 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-16 10:34:16,365 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-16 10:34:16,417 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-16 10:34:16,434 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/src/test/resources
+2023-02-16 10:38:07,185 [Worker-45: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.user:Dphone_User:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Downloads/DPhone-Enterprise-user/User_service/pom.xml.
+2023-02-16 10:38:08,932 [Worker-45: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_User/src/main/java
+2023-02-16 10:38:08,934 [Worker-45: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_User/src/main/resources
+2023-02-16 10:38:08,935 [Worker-45: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_User/src/main/resources
+2023-02-16 10:38:08,936 [Worker-45: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_User/src/test/java
+2023-02-16 10:38:09,081 [Worker-45: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2023-02-16 10:38:09,873 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-16 10:38:09,890 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-16 10:38:09,895 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Downloads/DPhone-Enterprise-user/User_service/src/test/resources
+2023-02-16 10:39:26,592 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-16 10:39:27,024 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.customer:Dphone_Customer_Service:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/pom.xml.
+2023-02-16 10:39:27,895 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/main/java
+2023-02-16 10:39:27,897 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 10:39:27,898 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 10:39:27,898 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/test/java
+2023-02-16 10:39:28,292 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2023-02-16 10:44:15,343 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-16 10:44:15,359 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-16 10:44:15,363 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Downloads/DPhone-Enterprise-user/User_service/src/test/resources
+2023-02-16 10:44:19,544 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-16 10:44:19,574 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-16 10:44:19,580 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Downloads/DPhone-Enterprise-user/User_service/src/test/resources
+2023-02-16 12:05:25,616 [Worker-59: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.referral:DphoneReferralService:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Downloads/DPhone-Enterprise-referral/DphoneReferralService/pom.xml.
+2023-02-16 12:05:27,255 [Worker-59: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DphoneReferralService/src/main/java
+2023-02-16 12:05:27,257 [Worker-59: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DphoneReferralService/src/main/resources
+2023-02-16 12:05:27,260 [Worker-59: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DphoneReferralService/src/main/resources
+2023-02-16 12:05:27,262 [Worker-59: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DphoneReferralService/src/test/java
+2023-02-16 12:05:27,853 [Worker-59: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2023-02-16 21:43:09,296 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-16 22:27:43,522 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-16 22:27:43,575 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-16 22:27:43,582 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/src/test/resources
+2023-02-16 22:42:22,190 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 22:42:22,352 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [263])
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/aether-connector-okhttp-0.17.8.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/commons-cli-1.4.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/commons-io-2.6.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/commons-lang3-3.8.1.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/guice-4.2.2-no_aop.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/jansi-2.4.0.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-artifact-3.8.6.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-builder-support-3.8.6.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-compat-3.8.6.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-core-3.8.6.jar
+2023-02-16 22:42:22,383 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-embedder-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-model-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-model-builder-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-plugin-api-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-repository-metadata-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-api-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-connector-basic-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-impl-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-provider-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-spi-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-transport-wagon-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-resolver-util-1.6.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-settings-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-settings-builder-3.8.6.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/maven-shared-utils-3.3.4.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/okhttp-3.14.1.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/okio-1.17.3.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/org.eclipse.sisu.inject-0.3.5.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/org.eclipse.sisu.plexus-0.3.5.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-build-api-0.0.7.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-cipher-2.0.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-classworlds-2.6.0.jar
+2023-02-16 22:42:22,384 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-component-annotations-2.1.0.jar
+2023-02-16 22:42:22,385 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-interpolation-1.26.jar
+2023-02-16 22:42:22,385 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-sec-dispatcher-2.0.jar
+2023-02-16 22:42:22,385 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/plexus-utils-3.3.1.jar
+2023-02-16 22:42:22,385 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/wagon-file-3.5.1.jar
+2023-02-16 22:42:22,385 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149/jars/wagon-provider-api-3.5.1.jar
+2023-02-16 22:42:22,387 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [8])
+2023-02-16 22:42:22,399 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/com.google.guava_30.1.0.v20221112-0806.jar
+2023-02-16 22:42:22,401 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [426])
+2023-02-16 22:42:22,402 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/slf4j.api_1.7.36.jar
+2023-02-16 22:42:22,402 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [18])
+2023-02-16 22:42:22,413 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/javax.inject_1.0.0.v20220405-0441.jar
+2023-02-16 22:42:22,413 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [16])
+2023-02-16 22:42:22,414 [Worker-40: Launching Dphone_Customer_Service] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: /Users/sankalpgupta/.p2/pool/plugins/javax.annotation_1.3.5.v20221112-0806.jar
+2023-02-16 22:42:22,422 [Worker-40: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 22:42:22,431 [Worker-40: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 22:44:52,316 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-16 22:44:53,415 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.customer:Dphone_Customer_Service:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/pom.xml.
+2023-02-16 22:44:55,000 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/main/java
+2023-02-16 22:44:55,002 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 22:44:55,003 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 22:44:55,005 [Worker-44: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/test/java
+2023-02-16 22:44:55,576 [Worker-44: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 2.00 sec, update config takes 0.00 sec 
+2023-02-16 22:44:58,850 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 22:44:59,040 [Worker-49: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 22:44:59,044 [Worker-49: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 22:46:02,533 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 22:46:02,647 [Worker-36: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 22:46:02,647 [Worker-36: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 22:55:49,508 [Worker-55: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-16 22:55:49,972 [Worker-55: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.customer:Dphone_Customer_Service:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/pom.xml.
+2023-02-16 22:55:50,534 [Worker-55: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/main/java
+2023-02-16 22:55:50,534 [Worker-55: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 22:55:50,535 [Worker-55: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 22:55:50,535 [Worker-55: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/test/java
+2023-02-16 22:55:50,801 [Worker-55: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-02-16 22:55:56,388 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 22:55:56,515 [Worker-54: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 22:55:56,516 [Worker-54: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 23:25:09,481 [Worker-63: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-16 23:25:10,596 [Worker-63: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.customer:Dphone_Customer_Service:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/pom.xml.
+2023-02-16 23:25:12,719 [Worker-63: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/main/java
+2023-02-16 23:25:12,721 [Worker-63: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 23:25:12,722 [Worker-63: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 23:25:12,722 [Worker-63: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/test/java
+2023-02-16 23:25:13,046 [Worker-63: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 3.00 sec, update config takes 0.00 sec 
+2023-02-16 23:25:15,622 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 23:25:19,777 [Worker-66: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 23:25:19,778 [Worker-66: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 23:28:59,747 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 23:28:59,943 [Worker-66: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 23:28:59,943 [Worker-66: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 23:31:05,380 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2023-02-16 23:31:18,958 [Worker-67: Launching User_service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Downloads/DPhone-Enterprise-user/User_service":
+2023-02-16 23:31:18,961 [Worker-67: Launching User_service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
+2023-02-16 23:33:26,705 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-16 23:33:27,007 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dphone.customer:Dphone_Customer_Service:0.0.1-SNAPSHOT @ /Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service/pom.xml.
+2023-02-16 23:33:27,384 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/main/java
+2023-02-16 23:33:27,386 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 23:33:27,386 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Dphone_Customer_Service/src/main/resources
+2023-02-16 23:33:27,387 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Dphone_Customer_Service/src/test/java
+2023-02-16 23:33:27,549 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-02-16 23:33:31,822 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-02-16 23:33:31,932 [Worker-67: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "/Users/sankalpgupta/Documents/DPhone-Enterprise/Dphone_Customer_Service":
+2023-02-16 23:33:31,932 [Worker-67: Launching Dphone_Customer_Service] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install spring-boot:run
