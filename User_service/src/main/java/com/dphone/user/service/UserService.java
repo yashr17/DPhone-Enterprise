@@ -8,13 +8,15 @@ public interface UserService {
 	
 	public String testService();
 
-	public String addUser(UserBean userBean);
+	public Boolean addUser(UserBean userBean);
 
-	public UserBean updateUser(UserBean userBean);
+	public Boolean updateUser(UserBean userBean);
 
 	public UserBean showUserInfo(int userId);
 
 	public String deleteUser(int userId);
 
 	public List<String> getUsername();
+
+	public Boolean isValidUser(int userId);
 }

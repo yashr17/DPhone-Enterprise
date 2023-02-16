@@ -15,17 +15,17 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public String addUser(UserBean userBean) {
+	public Boolean addUser(UserBean userBean) {
 		// TODO Auto-generated method stub
-		userDaoImpl.addUser(userBean);
-		return "added successfully";
+		Boolean addStatus = userDaoImpl.addUser(userBean);
+		return addStatus;
 	}
 
 	@Override
-	public UserBean updateUser(UserBean userBean) {
+	public Boolean updateUser(UserBean userBean) {
 		// TODO Auto-generated method stub
-		UserBean updatedUserBean = userDaoImpl.updateUser(userBean);
-		return updatedUserBean;
+		Boolean updateStatus = userDaoImpl.updateUser(userBean);
+		return updateStatus;
 	}
 
 	@Override
@@ -42,6 +42,13 @@ public class UserServiceImpl implements UserService {
 		return messageString;
 	}
 	
+	@Override
+	public Boolean isValidUser(int userId) {
+		// TODO Auto-generated method stub
+		Boolean validStatus = userDaoImpl.isValidUser(userId);
+		return validStatus;
+	}
+
 	/*
 	 * 
 	 * Testing methods below
@@ -60,5 +67,6 @@ public class UserServiceImpl implements UserService {
 		List<String> list = userDaoImpl.getUsername();
 		return list;
 	}
+
 
 }

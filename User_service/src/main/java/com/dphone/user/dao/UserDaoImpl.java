@@ -12,32 +12,42 @@ public class UserDaoImpl {
 	@Autowired
 	public UserDao userdao;
 
-	public void addUser(UserBean userBean) {
-		UserEntity userEntity = new UserEntity();
-		BeanUtils.copyProperties(userBean, userEntity);
-		userdao.save(userEntity);
-	}
-
-	public UserBean updateUser(UserBean userBean) {
-		
-		UserEntity userEntity = new UserEntity();
-		UserBean updatedUserBean = new UserBean();
-		
+	public Boolean addUser(UserBean userBean) {
+		Boolean addStatus = false;
 		try {
-			int userId = userBean.getUserId();
+			UserEntity userEntity = new UserEntity();
 			BeanUtils.copyProperties(userBean, userEntity);
 			userdao.save(userEntity);
 			
-			UserEntity updatedUserEntity = userdao.getReferenceById(userId);
-			BeanUtils.copyProperties(updatedUserEntity, updatedUserBean);
-		} catch (Exception e) {
+			addStatus = userdao.existsById(userBean.getUserId());
+			
+		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
+			return false;
+		}
+		return addStatus;
+	}
+
+	public Boolean updateUser(UserBean userBean) {
+		Boolean updateStatus = false;
+		try {
+			UserEntity userEntity = new UserEntity();
+			BeanUtils.copyProperties(userBean, userEntity);
+			userdao.save(userEntity);
+			
+			updateStatus = userEntity.equals(userdao.getReferenceById(userBean.getUserId()));
+			
+		} catch (IllegalArgumentException e) {
+			// TODO: handle exception
+			return false;
 		}
 		
-		return updatedUserBean;
+		return updateStatus;
 	}
 
 	public UserBean showUserInfo(int userId) {
+		
+		
 		UserEntity userEntity = userdao.getReferenceById(userId);
 		UserBean userBean = new UserBean();
 		BeanUtils.copyProperties(userEntity, userBean);
@@ -55,6 +65,12 @@ public class UserDaoImpl {
 		return null;
 	}
 	
+	public Boolean isValidUser(int userId) {
+		// TODO Auto-generated method stub
+		Boolean validStatus = userdao.existsById(userId);
+		return validStatus;
+	}
+
 	/*
 	 * 
 	 * Testing methpds below
@@ -65,5 +81,6 @@ public class UserDaoImpl {
 		List<String> list = userdao.getUsername();
 		return list;
 	}
+
 	
 }

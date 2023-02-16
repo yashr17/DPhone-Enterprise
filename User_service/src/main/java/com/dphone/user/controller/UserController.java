@@ -19,33 +19,39 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	// Create new User
+	// Create new User - C
 	@RequestMapping(value = "/add-user", method = RequestMethod.POST)
-	public ResponseEntity<String> addUser(@RequestBody UserBean userBean) {
-		String messageString =  this.userService.addUser(userBean);
-		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	public ResponseEntity<Boolean> addUser(@RequestBody UserBean userBean) {
+		Boolean addStatus =  this.userService.addUser(userBean);
+		return new ResponseEntity<Boolean>(addStatus, HttpStatus.OK);
 	}
 
-	// Update existing User
+	// Update existing User - U
 	@RequestMapping(value = "/update-user", method = RequestMethod.PUT)
-	public ResponseEntity<String> updateUser(@RequestBody UserBean userBean) {
-		UserBean udatedUserBean = this.userService.updateUser(userBean);
-		String messageString = "User updated successfully!\n\n" + udatedUserBean.toString();
-		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	public ResponseEntity<Boolean> updateUser(@RequestBody UserBean userBean) {
+		Boolean updateStatus = this.userService.updateUser(userBean);
+		return new ResponseEntity<Boolean>(updateStatus, HttpStatus.OK);
 	}
 	
-	// Get User data
+	// Get User data - R
 	@RequestMapping(value = "/{userId}/user-info", method = RequestMethod.GET)
 	public ResponseEntity<UserBean> showUserInfo(@PathVariable("userId") int userId) {
 		UserBean userBean = userService.showUserInfo(userId);
 		return new ResponseEntity<UserBean>(userBean, HttpStatus.OK);
 	}
 	
-	// Delete User
+	// Delete User - D
 	@RequestMapping(value = "/{userId}/delete-user", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteUser(@PathVariable("userId") int userId){
 		String messageString = this.userService.deleteUser(userId);
 		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	}
+	
+	// User validation
+	@RequestMapping(value = "/{userId}/user-validation", method = RequestMethod.GET)
+	public ResponseEntity<Boolean> isValidUser(@PathVariable("userId") int userId) {
+		Boolean validStatus = this.userService.isValidUser(userId);
+		return new ResponseEntity<Boolean>(validStatus, HttpStatus.OK);
 	}
 	
 	// Fetch referrals created by user
