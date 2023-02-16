@@ -23,6 +23,18 @@ public class CustomerServiceImpl implements CustomerService {
 		// TODO Auto-generated method stub
 		return customerDaoImpl.showCustomer(customer_id);
 	}
+
+	@Override
+	public boolean deleteCustomer(long customer_id) {
+		// TODO Auto-generated method stub
+		return customerDaoImpl.deleteCustomer(customer_id);
+	}
+
+	@Override
+	public boolean updateCustomer(CustomerBean customerBean) {
+		// TODO Auto-generated method stub
+		return customerDaoImpl.updateCustomer(customerBean);
+	}
 	
 	
 	

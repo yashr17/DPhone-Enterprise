@@ -7,4 +7,8 @@ public interface CustomerService {
 	boolean addCustomer(CustomerBean customerBean);
 	
 	CustomerBean showCustomer(long customer_id);
+	
+	boolean deleteCustomer(long customer_id);
+	
+	boolean updateCustomer(CustomerBean customerBean);
 }

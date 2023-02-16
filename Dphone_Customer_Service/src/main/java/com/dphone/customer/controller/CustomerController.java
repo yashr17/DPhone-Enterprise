@@ -3,9 +3,11 @@ package com.dphone.customer.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,5 +33,19 @@ public class CustomerController{
 		CustomerBean customerBean=customerService.showCustomer(customer_id);
 		return new ResponseEntity<CustomerBean>(customerBean,HttpStatus.OK);
 	}
+	
+	@DeleteMapping(value = "/deleteCustomer/{customer_id}")
+	public ResponseEntity<Boolean> deleteCustomer(@PathVariable("customer_id") Long customer_id){
+		boolean status=customerService.deleteCustomer(customer_id);
+		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
+	}
+	
+	@PutMapping(value = "/updateCustomer")
+	public ResponseEntity<Boolean> updateCustomer(@RequestBody CustomerBean customerBean){
+		boolean status=customerService.updateCustomer(customerBean);
+		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
+	}
+	
+	
 	
 }

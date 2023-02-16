@@ -24,8 +24,6 @@ public class CustomerDaoImpl {
 	}
 	
 	public CustomerBean showCustomer(long customer_id) {
-		
-		
 		try {
 			CustomerEntity customerEntity=customerDao.getReferenceById(customer_id);
 			CustomerBean customerBean=new CustomerBean();
@@ -37,5 +35,26 @@ public class CustomerDaoImpl {
 		}
 	}
 	
+	public boolean deleteCustomer(long customer_id) {
+		try {
+			customerDao.deleteById(customer_id);
+		} catch (IllegalArgumentException e) {
+			// TODO: handle exception
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean updateCustomer(CustomerBean customerBean) {
+		try {
+			CustomerEntity customerEntity=new CustomerEntity();
+			BeanUtils.copyProperties(customerBean, customerEntity);
+			customerDao.save(customerEntity);
+		} catch (IllegalArgumentException e) {
+			// TODO: handle exception
+			return false;
+		}
+		return true;
+	}
 	
 }
