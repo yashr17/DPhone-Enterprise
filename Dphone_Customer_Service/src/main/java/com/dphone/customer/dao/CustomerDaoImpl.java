@@ -23,5 +23,19 @@ public class CustomerDaoImpl {
 		return true;
 	}
 	
+	public CustomerBean showCustomer(long customer_id) {
+		
+		
+		try {
+			CustomerEntity customerEntity=customerDao.getReferenceById(customer_id);
+			CustomerBean customerBean=new CustomerBean();
+			BeanUtils.copyProperties(customerEntity, customerBean);
+			return customerBean;
+		} catch (IllegalArgumentException e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+	
 	
 }

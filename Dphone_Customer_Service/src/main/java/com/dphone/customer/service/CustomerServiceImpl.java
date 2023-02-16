@@ -17,6 +17,12 @@ public class CustomerServiceImpl implements CustomerService {
 		// TODO Auto-generated method stub
 		return customerDaoImpl.addCustomer(customerBean);
 	}
+
+	@Override
+	public CustomerBean showCustomer(long customer_id) {
+		// TODO Auto-generated method stub
+		return customerDaoImpl.showCustomer(customer_id);
+	}
 	
 	
 	
