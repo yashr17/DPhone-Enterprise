@@ -1,5 +1,7 @@
 package com.dphone.customer.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +37,12 @@ public class CustomerServiceImpl implements CustomerService {
 		// TODO Auto-generated method stub
 		return customerDaoImpl.updateCustomer(customerBean);
 	}
+
+//	@Override
+//	public List<CustomerBean> showACustomer() {
+//		// TODO Auto-generated method stub
+//		return customerDaoImpl.showAllCustomer();
+//	}
 	
 	
 	

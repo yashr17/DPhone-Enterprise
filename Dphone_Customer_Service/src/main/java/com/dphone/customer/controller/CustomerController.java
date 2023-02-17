@@ -1,5 +1,7 @@
 package com.dphone.customer.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +47,12 @@ public class CustomerController{
 		boolean status=customerService.updateCustomer(customerBean);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
+	
+//	@GetMapping(value = "/showAllCustomer")
+//	public ResponseEntity<List<CustomerBean>> shoeAllCustomer(){
+//		List<CustomerBean> customerBeans=customerService.showACustomer();
+//		return new ResponseEntity<List<CustomerBean>>(customerBeans,HttpStatus.OK);
+//	}
 	
 	
 	

@@ -1,5 +1,8 @@
 package com.dphone.customer.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -56,5 +59,18 @@ public class CustomerDaoImpl {
 		}
 		return true;
 	}
+	
+//	public List<CustomerBean> showAllCustomer(){
+//		List<CustomerEntity> customerEntities=customerDao.showAllCustomer();
+//		List<CustomerBean> customerBeans=new ArrayList<>();
+//		
+//		for(CustomerEntity customer:customerEntities) {
+//			CustomerBean customerBean=new CustomerBean();
+//			BeanUtils.copyProperties(customer, customerBean);
+//			customerBeans.add(customerBean);
+//		}
+//		return customerBeans;
+//		
+//	}
 	
 }
