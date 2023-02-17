@@ -24,12 +24,13 @@ public class UserEntity {
 	private String email;
 	private String username;
 	private String password;
+	private int refPoints;
+	private boolean isCustomer;
 	
 	public UserEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 	public UserEntity(int userId, String fname, String lname, String address, String mobile, String email,
 			String username, String password) {
 		super();
@@ -41,8 +42,10 @@ public class UserEntity {
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.refPoints = 0;
+		this.isCustomer = false;
 	}
-
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -91,12 +94,23 @@ public class UserEntity {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	public int getRefPoints() {
+		return refPoints;
+	}
+	public void setRefPoints(int refPoints) {
+		this.refPoints = refPoints;
+	}
+	public boolean isCustomer() {
+		return isCustomer;
+	}
+	public void setCustomer(boolean isCustomer) {
+		this.isCustomer = isCustomer;
+	}
+	
 	@Override
 	public String toString() {
 		return "UserEntity [userId=" + userId + ", fname=" + fname + ", lname=" + lname + ", address=" + address
-				+ ", mobile=" + mobile + ", email=" + email + ", username=" + username + ", password=" + password + "]";
+				+ ", mobile=" + mobile + ", email=" + email + ", username=" + username + ", password=" + password
+				+ ", refPoints=" + refPoints + ", isCustomer=" + isCustomer + "]";
 	}
-	
-	
 }

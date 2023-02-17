@@ -10,12 +10,13 @@ public class UserBean {
 	private String email;
 	private String username;
 	private String password;
+	private int refPoints;
+	private boolean isCustomer;
 
 	public UserBean() {
-		// TODO Auto-generated constructor stub
 		super();
+		// TODO Auto-generated constructor stub
 	}
-
 	public UserBean(int userId, String fname, String lname, String address, String mobile, String email,
 			String username, String password) {
 		super();
@@ -27,8 +28,10 @@ public class UserBean {
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.refPoints = 0;
+		this.isCustomer = false;
 	}
-
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -77,13 +80,27 @@ public class UserBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	public int getRefPoints() {
+		return refPoints;
+	}
+	public void setRefPoints(int refPoints) {
+		this.refPoints = refPoints;
+	}
+	public boolean isCustomer() {
+		return isCustomer;
+	}
+	public void setCustomer(boolean isCustomer) {
+		this.isCustomer = isCustomer;
+	}
+	
 	@Override
 	public String toString() {
 		return "Username: " + username +
 				"\nName: " + fname + " " + lname +
 				"\nMobile: " + mobile +
 				"\nEmail: " + email +
-				"\nAddress: " + address;
+				"\nAddress: " + address +
+				"\nPoints: " + refPoints +
+				"\nCustomer: " + (isCustomer ? "Yes" : "No");
 	}
 }

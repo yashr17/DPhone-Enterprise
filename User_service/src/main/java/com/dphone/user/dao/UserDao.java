@@ -14,4 +14,7 @@ public interface UserDao extends JpaRepository<UserEntity, Integer>{
 	@Query("SELECT u.username FROM UserEntity u")
 	public List<String> getUsername();
 
+	@Query("SELECT CASE WHEN COUNT(*)>0 THEN TRUE ELSE FALSE END FROM UserEntity u WHERE u.username = ?1")
+	public Boolean existsByUsername(String username);
+
 }

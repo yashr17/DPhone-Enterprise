@@ -20,7 +20,7 @@ public class UserDaoImpl {
 			BeanUtils.copyProperties(userBean, userEntity);
 			userdao.save(userEntity);
 			
-			addStatus = userdao.existsById(userBean.getUserId());
+			addStatus = userdao.existsByUsername(userBean.getUsername());
 			
 		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
@@ -37,7 +37,7 @@ public class UserDaoImpl {
 			BeanUtils.copyProperties(userBean, userEntity);
 			userdao.save(userEntity);
 			
-			updateStatus = userEntity.equals(userdao.getReferenceById(userBean.getUserId()));
+			updateStatus = !userEntity.equals(userdao.getReferenceById(userBean.getUserId()));
 			
 		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
