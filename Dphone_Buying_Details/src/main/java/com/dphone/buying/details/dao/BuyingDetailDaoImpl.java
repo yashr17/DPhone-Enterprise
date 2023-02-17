@@ -1,9 +1,10 @@
 package com.dphone.buying.details.dao;
 
 import com.dphone.buying.details.bean.BuyingDetailsBean;
-import com.dphone.buying.details.entity.BuyingDetailEntity;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.dphone.buying.details.entity.BuyingDetailEntity;
 
 public class BuyingDetailDaoImpl {
 
