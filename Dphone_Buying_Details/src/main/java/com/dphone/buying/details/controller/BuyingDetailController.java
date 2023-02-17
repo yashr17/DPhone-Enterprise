@@ -36,5 +36,6 @@ public class BuyingDetailController {
 	public ResponseEntity<Boolean> updateProduct(@RequestBody BuyingDetailsBean buyingDetailsBean){
 		boolean status= buyingDetailService.updateProduct(buyingDetailsBean);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
+
 	}
 }
