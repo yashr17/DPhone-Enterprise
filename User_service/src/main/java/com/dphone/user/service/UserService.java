@@ -14,7 +14,7 @@ public interface UserService {
 
 	public UserBean showUserInfo(int userId);
 
-	public String deleteUser(int userId);
+	public Boolean deleteUser(int userId);
 
 	public List<String> getUsername();
 

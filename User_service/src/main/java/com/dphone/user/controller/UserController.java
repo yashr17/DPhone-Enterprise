@@ -42,9 +42,9 @@ public class UserController {
 	
 	// Delete User - D
 	@RequestMapping(value = "/{userId}/delete-user", method = RequestMethod.DELETE)
-	public ResponseEntity<String> deleteUser(@PathVariable("userId") int userId){
-		String messageString = this.userService.deleteUser(userId);
-		return new ResponseEntity<String>(messageString, HttpStatus.OK);
+	public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") int userId){
+		Boolean deleteStatus = this.userService.deleteUser(userId);
+		return new ResponseEntity<Boolean>(deleteStatus, HttpStatus.OK);
 	}
 	
 	// User validation

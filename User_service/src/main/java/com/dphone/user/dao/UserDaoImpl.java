@@ -13,6 +13,7 @@ public class UserDaoImpl {
 	public UserDao userdao;
 
 	public Boolean addUser(UserBean userBean) {
+		// TODO Auto-generated method stub
 		Boolean addStatus = false;
 		try {
 			UserEntity userEntity = new UserEntity();
@@ -29,6 +30,7 @@ public class UserDaoImpl {
 	}
 
 	public Boolean updateUser(UserBean userBean) {
+		// TODO Auto-generated method stub
 		Boolean updateStatus = false;
 		try {
 			UserEntity userEntity = new UserEntity();
@@ -46,28 +48,36 @@ public class UserDaoImpl {
 	}
 
 	public UserBean showUserInfo(int userId) {
-		
-		
+		// TODO Auto-generated method stub
 		UserEntity userEntity = userdao.getReferenceById(userId);
 		UserBean userBean = new UserBean();
 		BeanUtils.copyProperties(userEntity, userBean);
 		return userBean;
 	}
 
-	public String deleteUser(int userId) {
+	public Boolean deleteUser(int userId) {
 		// TODO Auto-generated method stub
+		Boolean deleteStatus = false;
 		try {
-			userdao.deleteById(userId);			
-		} catch (Exception e) {
+			userdao.deleteById(userId);	
+			deleteStatus = !userdao.existsById(userId);
+		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
-			return "User with userId: " + userId + " does not exist";
+			return false;
 		}
-		return null;
+		return deleteStatus;
 	}
 	
 	public Boolean isValidUser(int userId) {
 		// TODO Auto-generated method stub
-		Boolean validStatus = userdao.existsById(userId);
+		Boolean validStatus = false;
+		try {
+			validStatus = userdao.existsById(userId);
+			
+		} catch (IllegalArgumentException e) {
+			// TODO: handle exception
+			return false;
+		}
 		return validStatus;
 	}
 

@@ -36,10 +36,10 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String deleteUser(int userId) {
+	public Boolean deleteUser(int userId) {
 		// TODO Auto-generated method stub
-		String messageString = userDaoImpl.deleteUser(userId);
-		return messageString;
+		Boolean deleteStatus = userDaoImpl.deleteUser(userId);
+		return deleteStatus;
 	}
 	
 	@Override
