@@ -20,7 +20,7 @@ public class BuyingDetailServiceImpl implements BuyingDetailService {
 	@Override
 	public BuyingDetailsBean showProduct(long customer_id) {
 		// TODO Auto-generated method stub
-		return buyingDetailDaoImpl.showProuct(customer_id);
+		return buyingDetailDaoImpl.showProduct(customer_id);
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class BuyingDetailDaoImpl {
 		return true;
 	}
 	
-	public BuyingDetailsBean showProuct(long customer_id) {
+	public BuyingDetailsBean showProduct(long customer_id) {
 		try {
 			BuyingDetailEntity buyingDetailEntity = buyingDetailDao.getReferenceById(customer_id);
 			BuyingDetailsBean buyingDetailsBean =new BuyingDetailsBean();
