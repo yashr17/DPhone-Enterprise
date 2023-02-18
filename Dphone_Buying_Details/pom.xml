@@ -15,10 +15,7 @@
 	<description>Dphone Customer Service</description>
 	<properties>
 		<java.version>17</java.version>
-<<<<<<< Updated upstream
-=======
 		<spring-cloud.version>2022.0.1</spring-cloud.version>
->>>>>>> Stashed changes
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,9 +48,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
-<<<<<<< Updated upstream
-	</dependencies>
-=======
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -74,7 +68,6 @@
 		</dependencies>
 	</dependencyManagement>
 
->>>>>>> Stashed changes
 	<build>
 		<plugins>
 			<plugin>
