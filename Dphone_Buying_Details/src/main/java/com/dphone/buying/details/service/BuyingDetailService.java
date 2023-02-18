@@ -4,11 +4,11 @@ import com.dphone.buying.details.bean.BuyingDetailsBean;
 
 public interface BuyingDetailService {
 
-	boolean addProduct(BuyingDetailsBean buyingDetailsBean);
+	boolean addBuyingDetail(BuyingDetailsBean buyingDetailsBean);
 	
-	BuyingDetailsBean showProduct(long customer_id);
+	BuyingDetailsBean showBuyingDetail(long customer_id);
 	
-	boolean deleteProduct(long customer_id);
+	boolean deleteBuyingDetail(long customer_id);
 	
-	boolean updateProduct(BuyingDetailsBean buyingDetailsBean);
+	boolean updateBuyingDetail(BuyingDetailsBean buyingDetailsBean);
 }

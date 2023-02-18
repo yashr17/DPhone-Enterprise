@@ -15,34 +15,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dphone.buying.details.service.BuyingDetailService;
 
-@RequestMapping("/product/")
+@RequestMapping("/buyingdetail/")
 @RestController
 public class BuyingDetailController {
 
 	@Autowired 
 	private BuyingDetailService buyingDetailService;
 	
-	@PostMapping(value = "/addProduct")
-	public ResponseEntity<Boolean> addProduct(@RequestBody BuyingDetailsBean buyingDetailsBean){
-		boolean status= buyingDetailService.addProduct(buyingDetailsBean);
+	@PostMapping(value = "/addbuyingdetail")
+	public ResponseEntity<Boolean> addBuyingDetail(@RequestBody BuyingDetailsBean buyingDetailsBean){
+		boolean status= buyingDetailService.addBuyingDetail(buyingDetailsBean);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
 	
-	@GetMapping(value = "/showProduct/{customer_id}")
-	public ResponseEntity<BuyingDetailsBean> showProduct(@PathVariable("customer_id") Long customer_id){
-		BuyingDetailsBean buyingDetailsBean = buyingDetailService.showProduct(customer_id);
+	@GetMapping(value = "/showbuyingdetail/{customer_id}")
+	public ResponseEntity<BuyingDetailsBean> showBuyingDetail(@PathVariable("customer_id") Long customer_id){
+		BuyingDetailsBean buyingDetailsBean = buyingDetailService.showBuyingDetail(customer_id);
 		return new ResponseEntity<BuyingDetailsBean>(buyingDetailsBean,HttpStatus.OK);
 	}
 	
-	@DeleteMapping(value = "/deleteProduct/{customer_id}")
-	public ResponseEntity<Boolean> deleteProduct(@PathVariable("customer_id") Long customer_id){
-		boolean status= buyingDetailService.deleteProduct(customer_id);
+	@DeleteMapping(value = "/deletebuyingdetail/{customer_id}")
+	public ResponseEntity<Boolean> deleteBuyingDetail(@PathVariable("customer_id") Long customer_id){
+		boolean status= buyingDetailService.deleteBuyingDetail(customer_id);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
 	
-	@PutMapping(value = "/updateProduct")
-	public ResponseEntity<Boolean> updateProduct(@RequestBody BuyingDetailsBean buyingDetailsBean){
-		boolean status= buyingDetailService.updateProduct(buyingDetailsBean);
+	@PutMapping(value = "/updatebuyingdetail")
+	public ResponseEntity<Boolean> updateBuyingDetail(@RequestBody BuyingDetailsBean buyingDetailsBean){
+		boolean status= buyingDetailService.updateBuyingDetail(buyingDetailsBean);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
 }

@@ -12,27 +12,27 @@ public class BuyingDetailServiceImpl implements BuyingDetailService {
 	private BuyingDetailDaoImpl buyingDetailDaoImpl;
 
 	@Override
-	public boolean addProduct(BuyingDetailsBean buyingDetailsBean) {
+	public boolean addBuyingDetail(BuyingDetailsBean buyingDetailsBean) {
 		// TODO Auto-generated method stub
-		return buyingDetailDaoImpl.addProduct(buyingDetailsBean);
+		return buyingDetailDaoImpl.addBuyingDetail(buyingDetailsBean);
 	}
 
 	@Override
-	public BuyingDetailsBean showProduct(long customer_id) {
+	public BuyingDetailsBean showBuyingDetail(long customer_id) {
 		// TODO Auto-generated method stub
-		return buyingDetailDaoImpl.showProduct(customer_id);
+		return buyingDetailDaoImpl.showBuyingDetail(customer_id);
 	}
 
 	@Override
-	public boolean deleteProduct(long customer_id) {
+	public boolean deleteBuyingDetail(long customer_id) {
 		// TODO Auto-generated method stub
-		return buyingDetailDaoImpl.deleteProduct(customer_id);
+		return buyingDetailDaoImpl.deleteBuyingDetail(customer_id);
 	}
 
 	@Override
-	public boolean updateProduct(BuyingDetailsBean buyingDetailsBean) {
+	public boolean updateBuyingDetail(BuyingDetailsBean buyingDetailsBean) {
 		// TODO Auto-generated method stub
-		return buyingDetailDaoImpl.updateProduct(buyingDetailsBean);
+		return buyingDetailDaoImpl.updateBuyingDetail(buyingDetailsBean);
 	}
 	
 	

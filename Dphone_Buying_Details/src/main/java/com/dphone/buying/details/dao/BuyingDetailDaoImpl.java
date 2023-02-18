@@ -11,7 +11,7 @@ public class BuyingDetailDaoImpl {
 	@Autowired
 	public BuyingDetailDao buyingDetailDao;
 	
-	public boolean addProduct(BuyingDetailsBean buyingDetailsBean) {
+	public boolean addBuyingDetail(BuyingDetailsBean buyingDetailsBean) {
 		BuyingDetailEntity buyingDetailEntity =new BuyingDetailEntity();
 		BeanUtils.copyProperties(buyingDetailsBean, buyingDetailEntity);
 		try {
@@ -23,7 +23,7 @@ public class BuyingDetailDaoImpl {
 		return true;
 	}
 	
-	public BuyingDetailsBean showProduct(long customer_id) {
+	public BuyingDetailsBean showBuyingDetail(long customer_id) {
 		try {
 			BuyingDetailEntity buyingDetailEntity = buyingDetailDao.getReferenceById(customer_id);
 			BuyingDetailsBean buyingDetailsBean =new BuyingDetailsBean();
@@ -35,7 +35,7 @@ public class BuyingDetailDaoImpl {
 		}
 	}
 	
-	public boolean deleteProduct(long customer_id) {
+	public boolean deleteBuyingDetail(long customer_id) {
 		try {
 			buyingDetailDao.deleteById(customer_id);
 		} catch (IllegalArgumentException e) {
@@ -45,7 +45,7 @@ public class BuyingDetailDaoImpl {
 		return true;
 	}
 	
-	public boolean updateProduct(BuyingDetailsBean buyingDetailsBean) {
+	public boolean updateBuyingDetail(BuyingDetailsBean buyingDetailsBean) {
 		try {
 			BuyingDetailEntity buyingDetailEntity =new BuyingDetailEntity();
 			BeanUtils.copyProperties(buyingDetailsBean, buyingDetailEntity);
