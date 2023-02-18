@@ -29,33 +29,50 @@ public class UserController {
 	// Update existing User - U
 	@RequestMapping(value = "/update-user", method = RequestMethod.PUT)
 	public ResponseEntity<Boolean> updateUser(@RequestBody UserBean userBean) {
-		Boolean updateStatus = this.userService.updateUser(userBean);
-		return new ResponseEntity<Boolean>(updateStatus, HttpStatus.OK);
+		Boolean updateUserStatus = this.userService.updateUser(userBean);
+		return new ResponseEntity<Boolean>(updateUserStatus, HttpStatus.OK);
 	}
 	
 	// Get User data - R
-	@RequestMapping(value = "/{userId}/user-info", method = RequestMethod.GET)
-	public ResponseEntity<UserBean> showUserInfo(@PathVariable("userId") int userId) {
-		UserBean userBean = userService.showUserInfo(userId);
+	@RequestMapping(value = "/{username}/user-info", method = RequestMethod.GET)
+	public ResponseEntity<UserBean> showUserInfo(@PathVariable("username") String username) {
+		UserBean userBean = userService.showUserInfo(username);
 		return new ResponseEntity<UserBean>(userBean, HttpStatus.OK);
 	}
 	
 	// Delete User - D
-	@RequestMapping(value = "/{userId}/delete-user", method = RequestMethod.DELETE)
-	public ResponseEntity<Boolean> deleteUser(@PathVariable("userId") int userId){
-		Boolean deleteStatus = this.userService.deleteUser(userId);
+	@RequestMapping(value = "/{username}/delete-user", method = RequestMethod.DELETE)
+	public ResponseEntity<Boolean> deleteUser(@PathVariable("username") String username){
+		Boolean deleteStatus = this.userService.deleteUser(username);
 		return new ResponseEntity<Boolean>(deleteStatus, HttpStatus.OK);
 	}
 	
 	// User validation
-	@RequestMapping(value = "/{userId}/user-validation", method = RequestMethod.GET)
-	public ResponseEntity<Boolean> isValidUser(@PathVariable("userId") int userId) {
-		Boolean validStatus = this.userService.isValidUser(userId);
+	@RequestMapping(value = "/{username}/user-validation", method = RequestMethod.GET)
+	public ResponseEntity<Boolean> isValidUser(@PathVariable("username") String username) {
+		Boolean validStatus = this.userService.isValidUser(username);
 		return new ResponseEntity<Boolean>(validStatus, HttpStatus.OK);
 	}
 	
-	// Fetch referrals created by user
+	// Get User's points
+	@RequestMapping(value = "/{username}/get-points", method = RequestMethod.GET)
+	public ResponseEntity<Integer> getPoints(@PathVariable("username") String username) {
+//		Object[] responseObject = (Object[]) new Object();
+		Integer referralPoints = this.userService.getPoints(username);
+//		Boolean referralPointsStatus = (referralPoints == (Integer)null) ? false : true;
+//		
+//		responseObject[0] = referralPointsStatus;
+//		responseObject[1] = referralPoints;
+		
+		return new ResponseEntity<Integer>(referralPoints, HttpStatus.OK);
+	}
 	
+	// Update User's points
+	@RequestMapping(value = "/{username}/update-points/{refPoints}", method = RequestMethod.PUT)
+	public ResponseEntity<Boolean> updatePoints(@PathVariable("username") String username, @PathVariable("refPoints") int refPoints) {
+		Boolean updatePointsStatus = this.userService.updatePoints(username, refPoints);
+		return new ResponseEntity<Boolean>(updatePointsStatus, HttpStatus.OK);
+	}
 	
 	/*
 	 * 

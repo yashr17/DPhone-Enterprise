@@ -29,24 +29,38 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserBean showUserInfo(int userId) {
+	public UserBean showUserInfo(String username) {
 		// TODO Auto-generated method stub
-		UserBean userBean = userDaoImpl.showUserInfo(userId);
+		UserBean userBean = userDaoImpl.showUserInfo(username);
 		return userBean;
 	}
 
 	@Override
-	public Boolean deleteUser(int userId) {
+	public Boolean deleteUser(String username) {
 		// TODO Auto-generated method stub
-		Boolean deleteStatus = userDaoImpl.deleteUser(userId);
+		Boolean deleteStatus = userDaoImpl.deleteUser(username);
 		return deleteStatus;
 	}
 	
 	@Override
-	public Boolean isValidUser(int userId) {
+	public Boolean isValidUser(String username) {
 		// TODO Auto-generated method stub
-		Boolean validStatus = userDaoImpl.isValidUser(userId);
+		Boolean validStatus = userDaoImpl.isValidUser(username);
 		return validStatus;
+	}
+
+	@Override
+	public Integer getPoints(String username) {
+		// TODO Auto-generated method stub
+		int referralPoints = userDaoImpl.getPoints(username);
+		return referralPoints;
+	}
+	
+	@Override
+	public Boolean updatePoints(String username, int refPoints) {
+		// TODO Auto-generated method stub
+		Boolean updatePointStatus = userDaoImpl.updatePoints(username, refPoints);
+		return updatePointStatus;
 	}
 
 	/*
@@ -67,6 +81,8 @@ public class UserServiceImpl implements UserService {
 		List<String> list = userDaoImpl.getUsername();
 		return list;
 	}
+
+
 
 
 }

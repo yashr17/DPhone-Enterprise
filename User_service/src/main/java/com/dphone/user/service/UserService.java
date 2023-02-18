@@ -12,11 +12,15 @@ public interface UserService {
 
 	public Boolean updateUser(UserBean userBean);
 
-	public UserBean showUserInfo(int userId);
+	public UserBean showUserInfo(String username);
 
-	public Boolean deleteUser(int userId);
+	public Boolean deleteUser(String username);
 
 	public List<String> getUsername();
 
-	public Boolean isValidUser(int userId);
+	public Boolean isValidUser(String username);
+
+	public Integer getPoints(String username);
+
+	public Boolean updatePoints(String username, int refPoints);
 }

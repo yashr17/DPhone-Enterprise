@@ -15,16 +15,23 @@ public class UserEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private int userId;
+	
 	@Column(name = "first_name")
 	private String fname;
+	
 	@Column(name = "last_name")
 	private String lname;
+	
 	private String address;
 	private String mobile;
 	private String email;
 	private String username;
 	private String password;
+	
+	@Column(name = "ref_points")
 	private int refPoints;
+	
+	@Column(name = "is_customer")
 	private boolean isCustomer;
 	
 	public UserEntity() {
