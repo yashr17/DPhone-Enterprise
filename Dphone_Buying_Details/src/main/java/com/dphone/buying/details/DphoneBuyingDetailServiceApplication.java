@@ -10,5 +10,8 @@ public class DphoneBuyingDetailServiceApplication {
 		SpringApplication.run(DphoneBuyingDetailServiceApplication.class, args);
 		System.out.println("Buying Details Application Started");
 	}
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 }
