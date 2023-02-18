@@ -17,13 +17,13 @@ public class ReferralController {
 	@Autowired
 	ReferralServiceImpl referralServiceImpl;
 	
-	@RequestMapping(value="/new", method=RequestMethod.POST)
+	@PostMapping("/new")
 	public ResponseEntity<Boolean> createReferral(@RequestBody ReferralBean referralBean) {
 		boolean status = referralServiceImpl.createReferral(referralBean);
-		return new ResponseEntity<Boolean>(status, HttpStatus.OK);
+		return new ResponseEntity<Boolean>(status, HttpStatus.CREATED);
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET)
+	@GetMapping("/list/{userId}")
 	public ResponseEntity<List<ReferralBean>> viewReferral(@PathVariable int userId){
 		List<ReferralBean> list = referralServiceImpl.viewReferral(userId);
 		
@@ -41,12 +41,18 @@ public class ReferralController {
 	}
 	
 	
-	@RequestMapping(value="/update", method=RequestMethod.PUT)
+	@PutMapping("/update")
 	public ResponseEntity<Boolean> updateReferral(@RequestBody ReferralBean referralBean){
 		
 		boolean status = referralServiceImpl.updateReferral(referralBean);
 		return new ResponseEntity<Boolean>(status, HttpStatus.OK);
 		
+	}
+	
+	@GetMapping("/redeem/{referral_code}")
+	public ResponseEntity<Double> redeemReferral(@PathVariable String referral_code){
+		double points = referralServiceImpl.redeemReferral(referral_code);
+		return new ResponseEntity<Double>(points, HttpStatus.FOUND);
 	}
 	
 }

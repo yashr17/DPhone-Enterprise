@@ -37,20 +37,20 @@ public class ReferralServiceImpl implements ReferralService{
 		return true;
 	}
 
-//	@Override
-//	public List<ReferralBean> viewReferral(int userId){
-//		
-//		List<ReferralEntity> referralList = referralDao.userReferralList(userId);
-//		List<ReferralBean> referralBeanList = new ArrayList<>();
-//		
-//		for(ReferralEntity referralEntity : referralList) {
-//			ReferralBean referralBean = new ReferralBean();
-//			BeanUtils.copyProperties(referralEntity, referralBean);
-//			referralBeanList.add(referralBean);
-//		}
-//		return referralBeanList;
-//		
-//	}
+	@Override
+	public List<ReferralBean> viewReferral(int userId){
+		
+		List<ReferralEntity> referralList = referralDao.findByUserId(userId);
+		List<ReferralBean> referralBeanList = new ArrayList<>();
+		
+		for(ReferralEntity referralEntity : referralList) {
+			ReferralBean referralBean = new ReferralBean();
+			BeanUtils.copyProperties(referralEntity, referralBean);
+			referralBeanList.add(referralBean);
+		}
+		return referralBeanList;
+		
+	}
 
 	@Override
 	public boolean deleteReferral(int referral_Id) {
@@ -87,29 +87,19 @@ public class ReferralServiceImpl implements ReferralService{
 	}
 
 	@Override
-	public double redeemReferral(String referralCode, String firstName, String LastName) {
+	public double redeemReferral(String referral_code) {
+		double points = 0;
 		
-//		List<ReferralEntity> list = referralDao.redeemReferral(referralCode, firstName, LastName);
-//		if(list.isEmpty()) return 0;
-//		
-//		else {
-//			
-//			ReferralEntity referralEntity = list.get(0);
-//			ReferralBean referralBean = new ReferralBean();
-//			BeanUtils.copyProperties(referralEntity, referralBean);
-//			referralBean.setStatus(false);
-//			
-//			updateReferral(referralBean);
-//			
-//			return 500;
-//		}
-		return 0;
+		ReferralEntity referralEntity = referralDao.findByReferral_code(referral_code);
+		referralEntity.setStatus(true);
+		referralDao.save(referralEntity);
+		return points;
+
 	}
 
-	@Override
-	public List<ReferralBean> viewReferral(int userId) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public Optional<ReferralEntity> getReferral(int referral_Id) {
+		return referralDao.findById(referral_Id);
 	}
 
 }
