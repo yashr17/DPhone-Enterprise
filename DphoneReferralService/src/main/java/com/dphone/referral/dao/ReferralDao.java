@@ -13,7 +13,10 @@ import com.dphone.referral.entity.Referral;
 public interface ReferralDao extends JpaRepository<Referral, Integer>{
 
 	
-	@Query("select referral from Referral referral where referral.userId=?")
-	List<Referral> userReferralList();
-	
+//	@Query("select referral from Referral referral where referral.userId=?1")
+//	List<Referral> userReferralList(int userId);
+//	
+//	
+//	@Query("select referral from Referral where referral referral.referralCode=?1 and referral.firstName=?2 and referral.lastName=?3")
+//	List<Referral> redeemReferral(String referralCode, String firstName, String lastName);
 }

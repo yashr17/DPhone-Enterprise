@@ -5,7 +5,11 @@ import java.util.Objects;
 
 import com.dphone.referral.entity.Referral;
 
+import jakarta.persistence.Entity;
+
 public class ReferralBean {
+	
+	// Attributes
 	
 	private int referralId;
 	
@@ -16,6 +20,8 @@ public class ReferralBean {
 	private String mobile;
 	
 	private String email;
+	
+	private String referralCode;
 	
 	private int userId;
 	
@@ -29,7 +35,7 @@ public class ReferralBean {
 		super();
 	}
 
-	public ReferralBean(int referralId, String firstName, String lastName, String mobile, String email, int userId,
+	public ReferralBean(int referralId, String firstName, String lastName, String mobile, String email, String referralCode, int userId,
 			Date dateOfReferral, boolean status) {
 		super();
 		this.referralId = referralId;
@@ -37,16 +43,26 @@ public class ReferralBean {
 		this.lastName = lastName;
 		this.mobile = mobile;
 		this.email = email;
+		this.referralCode = referralCode;
 		this.userId = userId;
 		this.dateOfReferral = dateOfReferral;
 		this.status = status;
 	}
-
+	
 	
 	// Getters & Setters
 	
+	
 	public int getReferralId() {
 		return referralId;
+	}
+
+	public String getReferralCode() {
+		return referralCode;
+	}
+
+	public void setReferralCode(String referralCode) {
+		this.referralCode = referralCode;
 	}
 
 	public void setReferralId(int referralId) {
@@ -109,12 +125,9 @@ public class ReferralBean {
 		this.status = status;
 	}
 
-	
-	// HashCode & Equals Method
-	
 	@Override
 	public int hashCode() {
-		return Objects.hash(referralId);
+		return Objects.hash(referralCode, referralId);
 	}
 
 	@Override
@@ -125,20 +138,20 @@ public class ReferralBean {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Referral other = (Referral) obj;
-		return referralId == other.getReferralId();
+		ReferralBean other = (ReferralBean) obj;
+		return Objects.equals(referralCode, other.referralCode) && referralId == other.referralId;
+	}
+
+	@Override
+	public String toString() {
+		return "ReferralBean [referralId=" + referralId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", mobile=" + mobile + ", email=" + email + ", referralCode=" + referralCode + ", userId=" + userId
+				+ ", dateOfReferral=" + dateOfReferral + ", status=" + status + "]";
 	}
 
 	
-	// ToString Method
+	// HashCode & Equals Method
 	
-	@Override
-	public String toString() {
-		return "Referral [referralId=" + referralId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", mobile=" + mobile + ", email=" + email + ", userId=" + userId + ", dateOfReferral="
-				+ dateOfReferral + ", status=" + status + "]";
-	}
 	
 	
 }
-

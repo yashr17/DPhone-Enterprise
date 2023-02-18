@@ -2,14 +2,17 @@ package com.dphone.referral.entity;
 
 import java.util.Date;
 import java.util.Objects;
-
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 
 @Entity
+@Table(name="referral")
 public class Referral {
 	
 	// Attributes
-	
+	@Id
 	private int referralId;
 	
 	private String firstName;
@@ -19,6 +22,8 @@ public class Referral {
 	private String mobile;
 	
 	private String email;
+	
+	private String referralCode;
 	
 	private int userId;
 	
@@ -32,7 +37,7 @@ public class Referral {
 		super();
 	}
 
-	public Referral(int referralId, String firstName, String lastName, String mobile, String email, int userId,
+	public Referral(int referralId, String firstName, String lastName, String mobile, String email, String referralCode, int userId,
 			Date dateOfReferral, boolean status) {
 		super();
 		this.referralId = referralId;
@@ -40,16 +45,26 @@ public class Referral {
 		this.lastName = lastName;
 		this.mobile = mobile;
 		this.email = email;
+		this.referralCode = referralCode;
 		this.userId = userId;
 		this.dateOfReferral = dateOfReferral;
 		this.status = status;
 	}
-
+	
 	
 	// Getters & Setters
 	
+	
 	public int getReferralId() {
 		return referralId;
+	}
+
+	public String getReferralCode() {
+		return referralCode;
+	}
+
+	public void setReferralCode(String referralCode) {
+		this.referralCode = referralCode;
 	}
 
 	public void setReferralId(int referralId) {
@@ -112,12 +127,9 @@ public class Referral {
 		this.status = status;
 	}
 
-	
-	// HashCode & Equals Method
-	
 	@Override
 	public int hashCode() {
-		return Objects.hash(referralId);
+		return Objects.hash(referralCode, referralId);
 	}
 
 	@Override
@@ -129,18 +141,20 @@ public class Referral {
 		if (getClass() != obj.getClass())
 			return false;
 		Referral other = (Referral) obj;
-		return referralId == other.referralId;
+		return Objects.equals(referralCode, other.referralCode) && referralId == other.referralId;
 	}
 
-	
-	// ToString Method
-	
 	@Override
 	public String toString() {
 		return "Referral [referralId=" + referralId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", mobile=" + mobile + ", email=" + email + ", userId=" + userId + ", dateOfReferral="
-				+ dateOfReferral + ", status=" + status + "]";
+				+ ", mobile=" + mobile + ", email=" + email + ", referralCode=" + referralCode + ", userId=" + userId
+				+ ", dateOfReferral=" + dateOfReferral + ", status=" + status + "]";
 	}
+
+	
+	// HashCode & Equals Method
+	
+	
 	
 	
 }

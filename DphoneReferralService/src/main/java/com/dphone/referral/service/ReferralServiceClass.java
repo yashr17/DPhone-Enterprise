@@ -3,6 +3,7 @@ package com.dphone.referral.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,12 @@ public class ReferralServiceClass implements ReferralServiceInterface {
 	@Override
 	public boolean createReferral(ReferralBean referralBean) {
 		
+		String uniqueString = UUID.randomUUID().toString();
+		
 		Referral referral = new Referral();
 		BeanUtils.copyProperties(referralBean, referral);
+		referral.setReferralCode(uniqueString);
+		
 		try{
 			referralDao.save(referral);
 		}
@@ -36,14 +41,14 @@ public class ReferralServiceClass implements ReferralServiceInterface {
 	@Override
 	public List<ReferralBean> viewReferral(int userId){
 		
-		List<Referral> referralList = referralDao.userReferralList();
+//		List<Referral> referralList = referralDao.userReferralList(userId);
 		List<ReferralBean> referralBeanList = new ArrayList<>();
-		
-		for(Referral referral : referralList) {
-			ReferralBean referralBean = new ReferralBean();
-			BeanUtils.copyProperties(referral, referralBean);
-			referralBeanList.add(referralBean);
-		}
+//		
+//		for(Referral referral : referralList) {
+//			ReferralBean referralBean = new ReferralBean();
+//			BeanUtils.copyProperties(referral, referralBean);
+//			referralBeanList.add(referralBean);
+//		}
 		return referralBeanList;
 		
 	}
@@ -81,5 +86,27 @@ public class ReferralServiceClass implements ReferralServiceInterface {
 		
 		return true;
 	}
+
+	@Override
+	public double redeemReferral(String referralCode, String firstName, String LastName) {
+		
+//		List<Referral> list = referralDao.redeemReferral(referralCode, firstName, LastName);
+//		if(list.isEmpty()) return 0;
+//		
+//		else {
+//			
+//			Referral referral = list.get(0);
+//			ReferralBean referralBean = new ReferralBean();
+//			BeanUtils.copyProperties(referral, referralBean);
+//			referralBean.setStatus(false);
+//			
+//			updateReferral(referralBean);
+//			
+//			return 500;
+//		}
+		return 0;
+	}
+	
+	
 	
 }
