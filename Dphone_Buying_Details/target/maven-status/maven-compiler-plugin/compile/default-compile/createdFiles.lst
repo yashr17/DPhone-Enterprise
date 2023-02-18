@@ -1,0 +1,8 @@
+com/dphone/buying/details/controller/BuyingDetailController.class
+com/dphone/buying/details/DphoneBuyingDetailServiceApplication.class
+com/dphone/buying/details/service/BuyingDetailServiceImpl.class
+com/dphone/buying/details/bean/BuyingDetailsBean.class
+com/dphone/buying/details/entity/BuyingDetailEntity.class
+com/dphone/buying/details/dao/BuyingDetailDao.class
+com/dphone/buying/details/service/BuyingDetailService.class
+com/dphone/buying/details/dao/BuyingDetailDaoImpl.class
