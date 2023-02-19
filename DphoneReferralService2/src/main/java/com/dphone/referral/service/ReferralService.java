@@ -17,6 +17,6 @@ public interface ReferralService {
 	 boolean deleteReferral(int referralId);
 	 
 	 boolean updateReferral(ReferralBean referralBean);
-
-	 double redeemReferral(String referral_code);
+	 
+	 double redeemReferral(String referralCode, String firstName, String LastName);
 }
