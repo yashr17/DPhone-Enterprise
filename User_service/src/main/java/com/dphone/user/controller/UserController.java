@@ -15,6 +15,7 @@ import com.dphone.user.bean.UserBean;
 import com.dphone.user.service.UserService;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 	@Autowired
 	private UserService userService;
