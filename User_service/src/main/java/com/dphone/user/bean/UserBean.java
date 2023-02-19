@@ -1,5 +1,9 @@
 package com.dphone.user.bean;
 
+import java.util.Collection;
+
+import com.dphone.user.external.bean.ReferralBean;
+
 public class UserBean {
 	
 	private int userId;
@@ -12,13 +16,15 @@ public class UserBean {
 	private String password;
 	private int refPoints;
 	private boolean isCustomer;
-
+	private Collection<ReferralBean> referralBeans;
+	
 	public UserBean() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public UserBean(int userId, String fname, String lname, String address, String mobile, String email,
-			String username, String password) {
+			String username, String password, int refPoints, boolean isCustomer,
+			Collection<ReferralBean> referralBeans) {
 		super();
 		this.userId = userId;
 		this.fname = fname;
@@ -28,8 +34,9 @@ public class UserBean {
 		this.email = email;
 		this.username = username;
 		this.password = password;
-		this.refPoints = 0;
-		this.isCustomer = false;
+		this.refPoints = refPoints;
+		this.isCustomer = isCustomer;
+		this.referralBeans = referralBeans;
 	}
 	
 	public int getUserId() {
@@ -92,7 +99,12 @@ public class UserBean {
 	public void setCustomer(boolean isCustomer) {
 		this.isCustomer = isCustomer;
 	}
-	
+	public Collection<ReferralBean> getReferralBeans() {
+		return referralBeans;
+	}
+	public void setReferralBeans(Collection<ReferralBean> referralBeans) {
+		this.referralBeans = referralBeans;
+	}
 	@Override
 	public String toString() {
 		return "Username: " + username +

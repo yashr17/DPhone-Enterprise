@@ -7,10 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.dphone.user.bean.UserBean;
 import com.dphone.user.entity.UserEntity;
+import com.dphone.user.external.bean.ReferralBean;
+import com.dphone.user.external.service.ReferralService;
 
 public class UserDaoImpl {
 	@Autowired
 	public UserDao userdao;
+	
+	@Autowired
+	public ReferralService referralService;
 	
 	public int getUserId(String username) {
 		try {
@@ -21,48 +26,67 @@ public class UserDaoImpl {
 		}
 	}
 
-	public Boolean addUser(UserBean userBean) {
+	public UserBean addUser(UserBean userBean) {
 		// TODO Auto-generated method stub
-		Boolean addStatus = false;
 		try {
 			UserEntity userEntity = new UserEntity();
 			BeanUtils.copyProperties(userBean, userEntity);
 			userdao.save(userEntity);
 			
-			addStatus = userdao.existsByUsername(userBean.getUsername());
+			userEntity = userdao.getReferenceById(userdao.getUserId(userBean.getUsername()));
+			BeanUtils.copyProperties(userEntity, userBean);
 			
+			return userBean;
 		} catch (Exception e) {
 			// TODO: handle exception
-			return false;
+			return null;
 		}
-		return addStatus;
 	}
 
-	public Boolean updateUser(UserBean userBean) {
+	public UserBean updateUser(UserBean userBean) {
 		// TODO Auto-generated method stub
-		Boolean updateStatus = false;
 		try {
-			UserEntity userEntity = new UserEntity();
-			BeanUtils.copyProperties(userBean, userEntity);
-			userdao.save(userEntity);
+			UserEntity oldUserEntity = userdao.getReferenceById(userdao.getUserId(userBean.getUsername()));
 			
-			updateStatus = !userEntity.equals(userdao.getReferenceById(userBean.getUserId()));
+			userBean.setUserId(oldUserEntity.getUserId());
+			userBean.setCustomer(oldUserEntity.isCustomer());
+			userBean.setRefPoints(oldUserEntity.getRefPoints());
+			userBean.setReferralBeans(oldUserEntity.getReferralBeans());
+			
+			UserEntity newUserEntity = new UserEntity();
+			BeanUtils.copyProperties(userBean, newUserEntity);
+			
+			userdao.save(newUserEntity);
+			
+			UserBean updatedUserBean = new UserBean();
+			BeanUtils.copyProperties(newUserEntity, updatedUserBean);
+			return updatedUserBean;
 			
 		} catch (Exception e) {
 			// TODO: handle exception
-			return false;
+			return null;
 		}
-		
-		return updateStatus;
 	}
 
+	@SuppressWarnings("unchecked")
 	public UserBean showUserInfo(String username) {
 		// TODO Auto-generated method stub
-		int userId = userdao.getUserId(username);
-		UserEntity userEntity = userdao.getReferenceById(userId);
-		UserBean userBean = new UserBean();
-		BeanUtils.copyProperties(userEntity, userBean);
-		return userBean;
+		try {
+			int userId = userdao.getUserId(username);
+			UserEntity userEntity = userdao.getReferenceById(userId);
+			referralService.viewReferral(userId);
+			
+			List<ReferralBean> referralBeans = (List<ReferralBean>) referralService.viewReferral(userId).getBody();
+			userEntity.setReferralBeans(referralBeans);
+			
+			UserBean userBean = new UserBean();
+			BeanUtils.copyProperties(userEntity, userBean);
+			return userBean;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}	
 	}
 
 	public Boolean deleteUser(String username) {
@@ -126,6 +150,22 @@ public class UserDaoImpl {
 		return updatePointStatus;
 	}
 
+	public UserBean getUser(String username) {
+		// TODO Auto-generated method stub
+		try {
+			int userId = userdao.getUserId(username);
+			
+			UserEntity userEntity = userdao.getReferenceById(userId);
+			UserBean userBean = new UserBean();
+			BeanUtils.copyProperties(userEntity, userBean);
+			
+			return userBean;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+
 	/*
 	 * 
 	 * Testing methpds below
@@ -136,6 +176,7 @@ public class UserDaoImpl {
 		List<String> list = userdao.getUsername();
 		return list;
 	}
+
 
 
 

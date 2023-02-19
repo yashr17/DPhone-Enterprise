@@ -8,9 +8,9 @@ public interface UserService {
 	
 	public String testService();
 
-	public Boolean addUser(UserBean userBean);
+	public UserBean addUser(UserBean userBean);
 
-	public Boolean updateUser(UserBean userBean);
+	public UserBean updateUser(UserBean userBean);
 
 	public UserBean showUserInfo(String username);
 
@@ -23,4 +23,6 @@ public interface UserService {
 	public Integer getPoints(String username);
 
 	public Boolean updatePoints(String username, int refPoints);
+
+	public UserBean getUser(String username);
 }

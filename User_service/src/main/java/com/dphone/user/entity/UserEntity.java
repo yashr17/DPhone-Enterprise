@@ -6,6 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+
+import java.util.Collection;
+
+import com.dphone.user.external.bean.ReferralBean;
 
 @Entity
 @Table(name = "user_details")
@@ -34,12 +39,16 @@ public class UserEntity {
 	@Column(name = "is_customer")
 	private boolean isCustomer;
 	
+	@Transient
+	private Collection<ReferralBean> referralBeans;
+
 	public UserEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public UserEntity(int userId, String fname, String lname, String address, String mobile, String email,
-			String username, String password) {
+			String username, String password, int refPoints, boolean isCustomer,
+			Collection<ReferralBean> referralBeans) {
 		super();
 		this.userId = userId;
 		this.fname = fname;
@@ -49,8 +58,9 @@ public class UserEntity {
 		this.email = email;
 		this.username = username;
 		this.password = password;
-		this.refPoints = 0;
-		this.isCustomer = false;
+		this.refPoints = refPoints;
+		this.isCustomer = isCustomer;
+		this.referralBeans = referralBeans;
 	}
 	
 	public int getUserId() {
@@ -113,11 +123,17 @@ public class UserEntity {
 	public void setCustomer(boolean isCustomer) {
 		this.isCustomer = isCustomer;
 	}
+	public Collection<ReferralBean> getReferralBeans() {
+		return referralBeans;
+	}
+	public void setReferralBeans(Collection<ReferralBean> referralBeans) {
+		this.referralBeans = referralBeans;
+	}
 	
 	@Override
 	public String toString() {
 		return "UserEntity [userId=" + userId + ", fname=" + fname + ", lname=" + lname + ", address=" + address
 				+ ", mobile=" + mobile + ", email=" + email + ", username=" + username + ", password=" + password
-				+ ", refPoints=" + refPoints + ", isCustomer=" + isCustomer + "]";
+				+ ", refPoints=" + refPoints + ", isCustomer=" + isCustomer + ", referralBeans=" + referralBeans + "]";
 	}
 }

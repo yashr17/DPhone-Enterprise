@@ -22,16 +22,16 @@ public class UserController {
 
 	// Create new User - C
 	@RequestMapping(value = "/add-user", method = RequestMethod.POST)
-	public ResponseEntity<Boolean> addUser(@RequestBody UserBean userBean) {
-		Boolean addStatus =  this.userService.addUser(userBean);
-		return new ResponseEntity<Boolean>(addStatus, HttpStatus.OK);
+	public ResponseEntity<UserBean> addUser(@RequestBody UserBean userBean) {
+		UserBean userBean2 =  this.userService.addUser(userBean);
+		return new ResponseEntity<UserBean>(userBean2, HttpStatus.OK);
 	}
 
 	// Update existing User - U
 	@RequestMapping(value = "/update-user", method = RequestMethod.PUT)
-	public ResponseEntity<Boolean> updateUser(@RequestBody UserBean userBean) {
-		Boolean updateUserStatus = this.userService.updateUser(userBean);
-		return new ResponseEntity<Boolean>(updateUserStatus, HttpStatus.OK);
+	public ResponseEntity<UserBean> updateUser(@RequestBody UserBean userBean) {
+		UserBean updatedUserBean = this.userService.updateUser(userBean);
+		return new ResponseEntity<UserBean>(updatedUserBean, HttpStatus.OK);
 	}
 	
 	// Get User data - R
@@ -73,6 +73,13 @@ public class UserController {
 	public ResponseEntity<Boolean> updatePoints(@PathVariable("username") String username, @PathVariable("refPoints") int refPoints) {
 		Boolean updatePointsStatus = this.userService.updatePoints(username, refPoints);
 		return new ResponseEntity<Boolean>(updatePointsStatus, HttpStatus.OK);
+	}
+	
+	// Get Userbean
+	@RequestMapping(value = "/{username}", method = RequestMethod.GET)
+	public ResponseEntity<UserBean> getUser(@PathVariable("username") String username) {
+		UserBean userbean = this.userService.getUser(username);
+		return new ResponseEntity<UserBean>(userbean, HttpStatus.OK);
 	}
 	
 	/*
