@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dphone.customer.bean.BuyingDetailsBean;
 import com.dphone.customer.bean.CustomerBean;
+import com.dphone.customer.client.BuyingDetailsClient;
 import com.dphone.customer.service.CustomerService;
 
 @RequestMapping("/customer/")
@@ -23,6 +25,9 @@ public class CustomerController{
 
 	@Autowired 
 	private CustomerService customerService;
+	
+	@Autowired
+	BuyingDetailsClient buyingDetailsClient;
 	
 	@PostMapping(value = "/addCustomer")
 	public ResponseEntity<Boolean> addCustomer(@RequestBody CustomerBean customerBean){
@@ -54,6 +59,11 @@ public class CustomerController{
 //		return new ResponseEntity<List<CustomerBean>>(customerBeans,HttpStatus.OK);
 //	}
 	
-	
+	//Buying Detail Feign Client
+	@PostMapping(value = "/addProduct")
+	public ResponseEntity<Boolean> addProduct(@RequestBody BuyingDetailsBean buyingDetailsBean){
+		boolean status= buyingDetailsClient.addProduct(buyingDetailsBean);
+		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
+	}
 	
 }
