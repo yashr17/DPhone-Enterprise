@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dphone.user.external.bean.ReferralBean;
 
-@FeignClient(name = "DPHONE-REFERRAL-SERVICE ")
+@FeignClient(url = "http://localhost:8081/referral" ,name = "DPHONE-REFERRAL-SERVICE")
 public interface ReferralService {
 
 	// Retrieve all referrals of User
