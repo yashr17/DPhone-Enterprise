@@ -62,7 +62,7 @@ public class CustomerController{
 	//Buying Detail Feign Client
 	@PostMapping(value = "/addProduct")
 	public ResponseEntity<Boolean> addProduct(@RequestBody BuyingDetailsBean buyingDetailsBean){
-		boolean status= buyingDetailsClient.addProduct(buyingDetailsBean);
+		boolean status= buyingDetailsClient.addbuyingdetail(buyingDetailsBean);
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
 	

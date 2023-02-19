@@ -12,6 +12,6 @@ import com.dphone.customer.bean.BuyingDetailsBean;
 @FeignClient(url = "http://localhost:8084/product", name = "BUYING-DETAIL-SERVICE")
 public interface BuyingDetailsClient {
 
-	@PostMapping(value = "/addProduct")
-	public Boolean addProduct(@RequestBody BuyingDetailsBean buyingDetailsBean);
+	@PostMapping(value = "/addbuyingdetail")
+	public Boolean addbuyingdetail(@RequestBody BuyingDetailsBean buyingDetailsBean);
 }
